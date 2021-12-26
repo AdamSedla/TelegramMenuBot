@@ -1,2 +1,2 @@
 # TelegramMenuBot
- Bot adding Scholarest menu every work day into Telegram group
+ Bot adding Scholarest menu everyday into Telegram group
