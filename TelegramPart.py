@@ -15,7 +15,7 @@ def telegram_bot_sendtext(bot_message):
 
 
 
-for key, value in GSheetPart.WeekDay.items():
+for key, value in GSheetPart.ChooseDay().items():
     telegram_bot_sendtext(value)
 
 

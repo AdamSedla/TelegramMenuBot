@@ -46,10 +46,8 @@ Friday = {  "Soup:":  x["Unnamed: 2"][FirstLane + 4 * DayDifference],
 }
 
 
-week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-
-day = datetime.datetime.today().weekday()
-
-WD = week[day]
-
-WeekDay = globals()[WD]
+def ChooseDay():
+    week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+    day = datetime.datetime.today().weekday()
+    WD = week[day]
+    return globals()[WD]
