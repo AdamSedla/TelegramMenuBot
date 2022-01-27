@@ -10,35 +10,35 @@ FirstLane = 4
 DayDifference = 7
 
 Monday = {  "Polévka:":  x["Unnamed: 2"][FirstLane],
-            "Ňamka:": x["Unnamed: 2"][FirstLane + 1],
+            "Dobrůtka:": x["Unnamed: 2"][FirstLane + 1],
             "*1:": x["Unnamed: 2"][FirstLane + 2],
             "*2:": x["Unnamed: 2"][FirstLane + 3],
             "*3:": x["Unnamed: 2"][FirstLane + 4]
 }
 
 Tuesday = { "Polévka:":  x["Unnamed: 2"][FirstLane + DayDifference],
-            "Ňamka:": x["Unnamed: 2"][FirstLane + DayDifference + 1],
+            "Dobrůtka:": x["Unnamed: 2"][FirstLane + DayDifference + 1],
             "*1:": x["Unnamed: 2"][FirstLane + DayDifference + 2],
             "*2:": x["Unnamed: 2"][FirstLane + DayDifference + 3],
             "*3:": x["Unnamed: 2"][FirstLane + DayDifference + 4]
 }
 
 Wednesday = { "Polévka:":x["Unnamed: 2"][FirstLane + 2 * DayDifference],
-              "Ňamka:": x["Unnamed: 2"][FirstLane + 2 * DayDifference + 1],
+              "Dobrůtka:": x["Unnamed: 2"][FirstLane + 2 * DayDifference + 1],
               "*1:": x["Unnamed: 2"][FirstLane + 2 * DayDifference + 2],
               "*2:": x["Unnamed: 2"][FirstLane + 2 * DayDifference + 3],
               "*3:": x["Unnamed: 2"][FirstLane + 2 * DayDifference + 4]
 }
 
 Thursday = { "Polévka:": x["Unnamed: 2"][FirstLane + 3 * DayDifference],
-             "Ňamka:": x["Unnamed: 2"][FirstLane + 3 * DayDifference + 1],
+             "Dobrůtka:": x["Unnamed: 2"][FirstLane + 3 * DayDifference + 1],
              "*1:": x["Unnamed: 2"][FirstLane + 3 * DayDifference + 2],
              "*2:": x["Unnamed: 2"][FirstLane + 3 * DayDifference + 3],
              "*3:": x["Unnamed: 2"][FirstLane + 3 * DayDifference + 4]
 }
 
 Friday = {  "Polévka:":  x["Unnamed: 2"][FirstLane + 4 * DayDifference],
-            "Ňamka:": x["Unnamed: 2"][FirstLane + 4 * DayDifference + 1],
+            "Dobrůtka:": x["Unnamed: 2"][FirstLane + 4 * DayDifference + 1],
             "*1:": x["Unnamed: 2"][FirstLane + 4 * DayDifference + 2],
             "*2:": x["Unnamed: 2"][FirstLane + 4 * DayDifference + 3],
             "*3:": x["Unnamed: 2"][FirstLane + 4 * DayDifference + 4]
