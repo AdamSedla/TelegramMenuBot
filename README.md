@@ -12,7 +12,8 @@ nothing
 
 ## To Do:
 not to return error if weekend <br/>
-bot react to input
+bot react to input <br/>
+optimalisation for GSheetPart
 
 ## Done:
 Take data from GoogleSheets <br/>
