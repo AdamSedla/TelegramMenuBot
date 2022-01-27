@@ -17,7 +17,7 @@ def telegram_bot_sendtext(bot_message):
     return response.json()
 
 try:
-    for key, value in GSheetPart.ChooseDay().items():
+    for key, value in GSheetPart.Menu.items():
         Message += key + "\n" + value + "\n\n"
 except:
     Message = "Error 666" + "\n" + "Dnes bude karbanátek po Ukrajinsku podle strýčka Stalina"
