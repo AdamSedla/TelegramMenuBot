@@ -9,42 +9,40 @@ x = pandas.read_csv(sheet_url).to_dict()
 FirstLane = 4
 DayDifference = 7
 
-
-Monday = {  "Soup:":  x["Unnamed: 2"][FirstLane],
-            "Snack:": x["Unnamed: 2"][FirstLane + 1],
-            "Menu1:": x["Unnamed: 2"][FirstLane + 2],
-            "Menu2:": x["Unnamed: 2"][FirstLane + 3],
-            "Menu3:": x["Unnamed: 2"][FirstLane + 4]
+Monday = {  "Polévka:":  x["Unnamed: 2"][FirstLane],
+            "Ňamka:": x["Unnamed: 2"][FirstLane + 1],
+            "*1:": x["Unnamed: 2"][FirstLane + 2],
+            "*2:": x["Unnamed: 2"][FirstLane + 3],
+            "*3:": x["Unnamed: 2"][FirstLane + 4]
 }
 
-Tuesday = { "Soup:":  x["Unnamed: 2"][FirstLane + DayDifference],
-            "Snack:": x["Unnamed: 2"][FirstLane + DayDifference + 1],
-            "Menu1:": x["Unnamed: 2"][FirstLane + DayDifference + 2],
-            "Menu2:": x["Unnamed: 2"][FirstLane + DayDifference + 3],
-            "Menu3:": x["Unnamed: 2"][FirstLane + DayDifference + 4]
+Tuesday = { "Polévka:":  x["Unnamed: 2"][FirstLane + DayDifference],
+            "Ňamka:": x["Unnamed: 2"][FirstLane + DayDifference + 1],
+            "*1:": x["Unnamed: 2"][FirstLane + DayDifference + 2],
+            "*2:": x["Unnamed: 2"][FirstLane + DayDifference + 3],
+            "*3:": x["Unnamed: 2"][FirstLane + DayDifference + 4]
 }
 
-Wednesday = { "Soup:":x["Unnamed: 2"][FirstLane + 2 * DayDifference],
-              "Snack:": x["Unnamed: 2"][FirstLane + 2 * DayDifference + 1],
-              "Menu1:": x["Unnamed: 2"][FirstLane + 2 * DayDifference + 2],
-              "Menu2:": x["Unnamed: 2"][FirstLane + 2 * DayDifference + 3],
-              "Menu3:": x["Unnamed: 2"][FirstLane + 2 * DayDifference + 4]
+Wednesday = { "Polévka:":x["Unnamed: 2"][FirstLane + 2 * DayDifference],
+              "Ňamka:": x["Unnamed: 2"][FirstLane + 2 * DayDifference + 1],
+              "*1:": x["Unnamed: 2"][FirstLane + 2 * DayDifference + 2],
+              "*2:": x["Unnamed: 2"][FirstLane + 2 * DayDifference + 3],
+              "*3:": x["Unnamed: 2"][FirstLane + 2 * DayDifference + 4]
 }
 
-Thursday = { "Soup:": x["Unnamed: 2"][FirstLane + 3 * DayDifference],
-             "Snack:": x["Unnamed: 2"][FirstLane + 3 * DayDifference + 1],
-             "Menu1:": x["Unnamed: 2"][FirstLane + 3 * DayDifference + 2],
-             "Menu2:": x["Unnamed: 2"][FirstLane + 3 * DayDifference + 3],
-             "Menu3:": x["Unnamed: 2"][FirstLane + 3 * DayDifference + 4]
+Thursday = { "Polévka:": x["Unnamed: 2"][FirstLane + 3 * DayDifference],
+             "Ňamka:": x["Unnamed: 2"][FirstLane + 3 * DayDifference + 1],
+             "*1:": x["Unnamed: 2"][FirstLane + 3 * DayDifference + 2],
+             "*2:": x["Unnamed: 2"][FirstLane + 3 * DayDifference + 3],
+             "*3:": x["Unnamed: 2"][FirstLane + 3 * DayDifference + 4]
 }
 
-Friday = {  "Soup:":  x["Unnamed: 2"][FirstLane + 4 * DayDifference],
-            "Snack:": x["Unnamed: 2"][FirstLane + 4 * DayDifference + 1],
-            "Menu1:": x["Unnamed: 2"][FirstLane + 4 * DayDifference + 2],
-            "Menu2:": x["Unnamed: 2"][FirstLane + 4 * DayDifference + 3],
-            "Menu3:": x["Unnamed: 2"][FirstLane + 4 * DayDifference + 4]
+Friday = {  "Polévka:":  x["Unnamed: 2"][FirstLane + 4 * DayDifference],
+            "Ňamka:": x["Unnamed: 2"][FirstLane + 4 * DayDifference + 1],
+            "*1:": x["Unnamed: 2"][FirstLane + 4 * DayDifference + 2],
+            "*2:": x["Unnamed: 2"][FirstLane + 4 * DayDifference + 3],
+            "*3:": x["Unnamed: 2"][FirstLane + 4 * DayDifference + 4]
 }
-
 
 def ChooseDay():
     week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
