@@ -2,7 +2,6 @@ import requests
 import Codes
 import GSheetPart
 import time
-import schedule
 import datetime
 
 Message = "Menu pro dnešek:" + "\n\n"
