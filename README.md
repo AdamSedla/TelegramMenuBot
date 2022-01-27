@@ -11,7 +11,6 @@
 nothing
 
 ## To Do:
-not to return error if weekend <br/>
 bot react to input <br/>
 optimalisation for GSheetPart <br/>
 documentation
@@ -20,3 +19,4 @@ documentation
 Take data from GoogleSheets <br/>
 Send taken data into Telegram <br/> 
 Choose day of the week on it's own <br/>
+not to return error if weekend <br/>
