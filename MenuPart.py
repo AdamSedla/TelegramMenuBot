@@ -17,3 +17,11 @@ Menu = { "Polévka:": x["Unnamed: 2"][FirstLane + DayDifference * day],
          "Oběd 2:":  x["Unnamed: 2"][FirstLane + DayDifference * day + 3],
          "Oběd 3:":  x["Unnamed: 2"][FirstLane + DayDifference * day + 4]
 }
+
+Message = "Menu pro dnešek:" + "\n\n"
+
+try:
+    for key, value in Menu.items():
+        Message += key + "\n" + value + "\n\n"
+except:
+    Message = "Error 666" + "\n" + "Dnes bude karbanátek po Ukrajinsku podle strýčka Stalina"
