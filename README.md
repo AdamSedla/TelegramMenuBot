@@ -12,8 +12,10 @@ nothing
 
 ## To Do:
 documentation <br/>
-pin message and unpin old message <br/>
-/menu_tommorow <br/>
+pin new message and unpin old message <br/>
+/dayMenu <br/>
+Cache <br/>
+JSON file
 
 ## Done:
 Take data from GoogleSheets <br/>
