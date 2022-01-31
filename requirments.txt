@@ -1,0 +1,6 @@
+pandas
+datetime
+requests
+time
+schedule
+telebot

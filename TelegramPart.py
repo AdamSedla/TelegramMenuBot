@@ -1,9 +1,11 @@
 import requests
 import Codes
-import GSheetPart
+import MenuPart
+import datetime
+import telebot
+
 
 def telegram_bot_sendtext(bot_message):
-    
 
     bot_token = Codes.Token
     bot_chatID = Codes.ChatID
@@ -13,13 +15,4 @@ def telegram_bot_sendtext(bot_message):
 
     return response.json()
 
-
-
-for key, value in GSheetPart.WeekDay.items():
-    telegram_bot_sendtext(value)
-
-
-
-#for key, value in GSheetPart.Monday.items() :
-#    print (telegram_bot_sendtext(value))
-
+telegram_bot_sendtext(MenuPart.DayMenu(MenuPart.day))
