@@ -1,10 +1,9 @@
 import requests
 import Codes
-import GSheetPart
-import time
+import MenuPart
 import datetime
+import telebot
 
-Message = "Menu pro dnešek:" + "\n\n"
 
 def telegram_bot_sendtext(bot_message):
 
@@ -16,10 +15,4 @@ def telegram_bot_sendtext(bot_message):
 
     return response.json()
 
-try:
-    for key, value in GSheetPart.Menu.items():
-        Message += key + "\n" + value + "\n\n"
-except:
-    Message = "Error 666" + "\n" + "Dnes bude karbanátek po Ukrajinsku podle strýčka Stalina"
-
-telegram_bot_sendtext(Message)
+telegram_bot_sendtext(MenuPart.DayMenu(MenuPart.day))
