@@ -10,8 +10,6 @@ FirstLane = 4
 DayDifference = 7
 
 day = datetime.datetime.today().weekday()
-week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
-WD = week[day]
 
 Menu = { "Polévka:": x["Unnamed: 2"][FirstLane + DayDifference * day],
          "Ňamka:":   x["Unnamed: 2"][FirstLane + DayDifference * day + 1],
