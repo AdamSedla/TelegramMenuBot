@@ -9,7 +9,8 @@ def help_command(message):
     bot.send_message(
         message.chat.id,
         "Hello there \n" +
-        "Pro menu pro dnešek: /menu"
+        "Menu pro dnešek: /menu \n" +
+        "Menu pro zvolený den: /daymenu \n" +
     )
 
 @bot.message_handler(commands=['menu'])
@@ -17,13 +18,8 @@ def menu_command(message):
     bot.send_chat_action(message.chat.id, 'typing')
     bot.send_message(
         message.chat.id,
-        MenuPart.Message
+        MenuPart.DayMenu(MenuPart.day)
     )
-
-@bot.message_handler(commands=['weekmenu'])
-def WeekMenu_command(message):
-    pass
-
     
 @bot.message_handler(commands=['daymenu'])
 def DayMenu_command(message):
@@ -43,14 +39,39 @@ def DayMenu_command(message):
     @bot.callback_query_handler(func=lambda call: True)
     def iq_callback(input):
         data = input.data
-        bot.send_message(
-            message.chat.id,
-            'Hello There'
-        )
+        if data == 'Monday':
+            bot.answer_callback_query(input.id)
+            bot.send_message(
+                message.chat.id,
+                MenuPart.DayMenu(0)
+            )
+        elif data == 'Tuesday':
+            bot.answer_callback_query(input.id)
+            bot.send_message(
+                message.chat.id,
+                MenuPart.DayMenu(1)
+            )
+        elif data == 'Wednesday':
+            bot.answer_callback_query(input.id)
+            bot.send_message(
+                message.chat.id,
+                MenuPart.DayMenu(2)
+            )
+        elif data == 'Thursday':
+            bot.answer_callback_query(input.id)
+            bot.send_message(
+                message.chat.id,
+                MenuPart.DayMenu(3)
+            )
+        elif data == 'Friday':
+            bot.answer_callback_query(input.id)
+            bot.send_message(
+                message.chat.id,
+                MenuPart.DayMenu(4)
+            )
 
 
     
-
 
 
 bot.polling(none_stop=True)
