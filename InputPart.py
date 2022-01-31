@@ -9,7 +9,7 @@ def help_command(message):
     bot.send_message(
         message.chat.id,
         "Hello there \n" +
-        "Pro menu pro dnešek /menu"
+        "Pro menu pro dnešek: /menu"
     )
 
 @bot.message_handler(commands=['menu'])
