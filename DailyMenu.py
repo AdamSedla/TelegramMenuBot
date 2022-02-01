@@ -5,6 +5,10 @@ import datetime
 import telebot
 
 
+
+
+
+
 def telegram_bot_sendtext(bot_message):
 
     bot_token = Codes.Token
@@ -14,5 +18,8 @@ def telegram_bot_sendtext(bot_message):
     response = requests.get(send_text)
 
     return response.json()
+
+
+
 
 telegram_bot_sendtext(MenuPart.DayMenu(MenuPart.day))
