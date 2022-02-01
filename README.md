@@ -13,7 +13,6 @@ nothing
 ## To Do:
 documentation <br/>
 pin new message and unpin old message <br/>
-/dayMenu <br/>
 Cache <br/>
 JSON file
 
@@ -23,4 +22,5 @@ Send taken data into Telegram <br/>
 Choose day of the week on it's own <br/>
 not to return error if weekend <br/>
 optimalisation for GSheetPart  <br/>
-bot react to input
+bot react to input <br/>
+/dayMenu <br/>
