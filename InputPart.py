@@ -20,7 +20,7 @@ def menu_command(message):
         message.chat.id,
         MenuPart.DayMenu(MenuPart.day)
     )
-    
+
 @bot.message_handler(commands=['daymenu'])
 def DayMenu_command(message):
     keyboard = telebot.types.InlineKeyboardMarkup()
@@ -31,47 +31,33 @@ def DayMenu_command(message):
         telebot.types.InlineKeyboardButton('Čtvrtek', callback_data='Thursday'),
         telebot.types.InlineKeyboardButton('Pátek', callback_data='Friday')
     )
+    bot.send_chat_action(message.chat.id, 'typing')
     bot.send_message(
         message.chat.id,
         'Který den chcete vidět?',
         reply_markup=keyboard
     )
+
     @bot.callback_query_handler(func=lambda call: True)
     def iq_callback(input):
         data = input.data
+        def SendMenu(MessageDay):
+            bot.answer_callback_query(input.id)
+            bot.send_chat_action(message.chat.id, 'typing')
+            bot.send_message(
+                message.chat.id,
+                MenuPart.DayMenu(MessageDay)
+            )
+
         if data == 'Monday':
-            bot.answer_callback_query(input.id)
-            bot.send_message(
-                message.chat.id,
-                MenuPart.DayMenu(0)
-            )
+            SendMenu(0)
         elif data == 'Tuesday':
-            bot.answer_callback_query(input.id)
-            bot.send_message(
-                message.chat.id,
-                MenuPart.DayMenu(1)
-            )
+            SendMenu(1)
         elif data == 'Wednesday':
-            bot.answer_callback_query(input.id)
-            bot.send_message(
-                message.chat.id,
-                MenuPart.DayMenu(2)
-            )
+            SendMenu(2)
         elif data == 'Thursday':
-            bot.answer_callback_query(input.id)
-            bot.send_message(
-                message.chat.id,
-                MenuPart.DayMenu(3)
-            )
+            SendMenu(3)
         elif data == 'Friday':
-            bot.answer_callback_query(input.id)
-            bot.send_message(
-                message.chat.id,
-                MenuPart.DayMenu(4)
-            )
-
-
-    
-
+            SendMenu(4)
 
 bot.polling(none_stop=True)
