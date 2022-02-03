@@ -12,7 +12,6 @@ nothing
 
 ## To Do:
 documentation <br/>
-pin new message and unpin old message <br/>
 Cache <br/>
 JSON file
 
@@ -24,3 +23,4 @@ not to return error if weekend <br/>
 optimalisation for GSheetPart  <br/>
 bot react to input <br/>
 /dayMenu <br/>
+pin new message and unpin old message <br/>

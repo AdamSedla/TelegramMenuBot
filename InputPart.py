@@ -12,6 +12,7 @@ def help_command(message):
         "Menu pro dnešek: /menu \n" +
         "Menu pro zvolený den: /daymenu"
     )
+    print(message.chat.id)
 
 @bot.message_handler(commands=['menu'])
 def menu_command(message):
