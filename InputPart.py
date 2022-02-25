@@ -43,7 +43,6 @@ def DayMenu_command(message):
         data = input.data
         def SendMenu(MessageDay):
             bot.answer_callback_query(input.id)
-            bot.send_chat_action(message.chat.id, 'typing')
             bot.send_message(
                 message.chat.id,
                 MenuPart.DayMenu(MessageDay)
