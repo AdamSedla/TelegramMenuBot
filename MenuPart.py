@@ -6,13 +6,11 @@ sheet_url = "https://docs.google.com/spreadsheets/d/"+Codes.GSheet+"/export?form
 
 x = pandas.read_csv(sheet_url).to_dict()
 
-day = datetime.datetime.today().weekday()
-
-week = ["Pondělí", "Úterý", "Středa", "Čtvrtek", "Pátek"]
-
 def DayMenu(day):
     FirstLane = 4
     DayDifference = 7
+
+    week = ["Pondělí", "Úterý", "Středa", "Čtvrtek", "Pátek"]
 
     Menu = { "Polévka:": x["Unnamed: 2"][FirstLane + DayDifference * day],
             "Ňamka:":   x["Unnamed: 2"][FirstLane + DayDifference * day + 1],

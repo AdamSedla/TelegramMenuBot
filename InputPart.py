@@ -1,6 +1,7 @@
 import telebot
 import Codes
 import MenuPart
+import datetime
 
 bot = telebot.TeleBot(Codes.Token)
 
@@ -32,10 +33,12 @@ while True:
     @bot.message_handler(commands=['menu'])
     def menu_command(message):
         try:
+            day = datetime.datetime.today().weekday()
+
             bot.send_chat_action(message.chat.id, 'typing')
             bot.send_message(
                 message.chat.id,
-                MenuPart.DayMenu(MenuPart.day)
+                MenuPart.DayMenu(day)
             )
         except:
             print("Error in /menu function")
