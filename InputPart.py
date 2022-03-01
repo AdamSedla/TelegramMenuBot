@@ -11,7 +11,7 @@ while True:
             bot.send_message(
                 message.chat.id,
                 "Hello there \n" +
-                "Pro více info /help\n" +
+                "Pro více info /help"
             )
         except:
             print("Error in /start function")
