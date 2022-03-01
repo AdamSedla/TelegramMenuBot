@@ -5,13 +5,24 @@ import MenuPart
 bot = telebot.TeleBot(Codes.Token)
 
 while True:
+    @bot.message_handler(commands=['start'])
+    def help_command(message):
+        try:
+            bot.send_message(
+                message.chat.id,
+                "Hello there \n" +
+                "Pro více info /help\n" +
+            )
+        except:
+            print("Error in /start function")
+
+
     
     @bot.message_handler(commands=['help'])
     def help_command(message):
         try:
             bot.send_message(
                 message.chat.id,
-                "Hello there \n" +
                 "Menu pro dnešek: /menu \n" +
                 "Menu pro zvolený den: /daymenu"
             )
