@@ -46,7 +46,6 @@ while True:
     @bot.message_handler(commands=['daymenu'])
     def DayMenu_command(message):
         try:
-            globals()['message_id'] = message.chat.id
             keyboard = telebot.types.InlineKeyboardMarkup()
             keyboard.row(
                 telebot.types.InlineKeyboardButton('Pondělí', callback_data='Monday'),
@@ -68,7 +67,7 @@ while True:
                 def SendMenu(MessageDay):
                     bot.answer_callback_query(input.id)
                     bot.send_message(
-                        message_id,
+                        message.chat.id,
                         MenuPart.DayMenu(MessageDay)
                     )
 
