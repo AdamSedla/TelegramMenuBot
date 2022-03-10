@@ -12,5 +12,6 @@ try:
                 )
     MessageID = Message.message_id
     bot.pin_chat_message(Codes.ChatID, MessageID)
+    
 except:
     print("Error in DailyMenu.py")
