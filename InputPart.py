@@ -86,7 +86,7 @@ try:
             except:
                 print("Error in /daymenu function")
 
-        bot.polling(none_stop=True)
+        bot.infinity_polling(timeout=10, long_polling_timeout = 5)
 
 except:
     traceback.print_exc()
