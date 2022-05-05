@@ -23,6 +23,6 @@ def DayMenu(day):
         for key, value in Menu.items():
             Message += key + "\n" + value + "\n\n"
     except:
-        Message = "Error 666\nDnes bude karbanátek po Ukrajinsku podle strýčka Stalina"
+        Message = "Chyba při zisku menu z tabulky, zkuste to prosím později."
 
     return Message
