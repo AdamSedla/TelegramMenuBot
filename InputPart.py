@@ -11,7 +11,7 @@ from requests.exceptions import ConnectionError, ReadTimeout
 bot = telebot.TeleBot(Codes.Token)
 
 try:
-    while True:
+    while 1 == 1:
         @bot.message_handler(commands=['start'])
         def help_command(message):
             try:
