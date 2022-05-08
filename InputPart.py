@@ -9,9 +9,10 @@ import os
 from requests.exceptions import ConnectionError, ReadTimeout
 
 bot = telebot.TeleBot(Codes.Token)
+WeekendError = 42, 46
 
 try:
-    while 1 == 1:
+    while True:
         @bot.message_handler(commands=['start'])
         def help_command(message):
             try:
@@ -38,14 +39,22 @@ try:
         def menu_command(message):
             try:
                 day = datetime.datetime.today().weekday()
-
+                               
                 bot.send_chat_action(message.chat.id, 'typing')
                 bot.send_message(
                     message.chat.id,
                     MenuPart.DayMenu(day)
                 )
+
+            except KeyError as WeekendError:
+                bot.send_chat_action(message.chat.id, 'typing')
+                bot.send_message(
+                    message.chat.id,
+                    "O víkendu zavřeno"
+                )
+               
             except:
-                print("Error in /menu function")
+               print("Error in /menu function")
 
         @bot.message_handler(commands=['daymenu'])
         def DayMenu_command(message):
