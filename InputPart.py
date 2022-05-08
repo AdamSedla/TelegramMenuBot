@@ -12,6 +12,10 @@ bot = telebot.TeleBot(Codes.Token)
 WeekendError = 42, 46
 
 try:
+    bot.send_message(
+        Codes.ChatID,
+        "Bot started"
+    )
     while True:
         @bot.message_handler(commands=['start'])
         def help_command(message):
@@ -97,13 +101,11 @@ try:
             except:
                 print("Error in /daymenu function")
 
-        try:
-            bot.infinity_polling(timeout=10, long_polling_timeout=5)
-        except (ConnectionError, ReadTimeout) as e:
-            sys.stdout.flush()
-            os.execv(sys.argv[0], sys.argv)
-        else:
-            bot.infinity_polling(timeout=10, long_polling_timeout=5)
+        bot.infinity_polling(timeout=10, long_polling_timeout = 5)
+    bot.send_message(
+        Codes.ChatID,
+        "Bot Ended"
+    )
         
 except:
     traceback.print_exc()
