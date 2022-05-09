@@ -102,10 +102,9 @@ try:
                 print("Error in /daymenu function")
 
         bot.infinity_polling(timeout=10, long_polling_timeout = 5)
+        
+except:
     bot.send_message(
         Codes.ChatID,
         "Bot Ended"
     )
-        
-except:
-    traceback.print_exc()
